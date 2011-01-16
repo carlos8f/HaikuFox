@@ -1,0 +1,150 @@
+/*
+ * The contents of this file are subject to the Netscape Public
+ * License Version 1.1 (the "License"); you may not use this file
+ * except in compliance with the License. You may obtain a copy of
+ * the License at http://www.mozilla.org/NPL/
+ *
+ * Software distributed under the License is distributed on an "AS
+ * IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or
+ * implied. See the License for the specific language governing
+ * rights and limitations under the License.
+ *
+ * The Original Code is Mozilla Communicator client code, released
+ * March 31, 1998.
+ *
+ * The Initial Developer of the Original Code is Netscape
+ * Communications Corporation. Portions created by Netscape are
+ * Copyright (C) 1998-2001 Netscape Communications Corporation. All
+ * Rights Reserved.
+ *
+ * Contributor(s):
+ *	 Joe Hewitt (hewitt@netscape.com)
+ */
+
+/* ===== autocomplete.css =================================================
+  == Styles used by the autocomplete widget.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+/* ::::: autocomplete ::::: */
+
+textbox {
+  cursor: default;
+  padding: 0;
+}
+
+/* Used by autocomplete widgets that don't have an icon. Gross. -dwh */
+textbox.padded {
+  padding: 1px 0px 1px 2px;
+}
+
+.autocomplete-textbox-container {
+  -moz-box-align: center;
+}
+
+.textbox-input-box {
+  margin: 0px;
+  -moz-box-align: center;
+}
+
+/* ::::: history button ::::: */
+
+.autocomplete-history-dropmarker {
+  width: 17px;
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  padding: 1px;
+  list-style-image: url("chrome://global/skin/arrow/arrow-menulist.gif");
+}
+
+#urlbar[level="high"] > .autocomplete-history-dropmarker,
+#urlbar[level="low"] > .autocomplete-history-dropmarker,
+#urlbar[level="broken"] > .autocomplete-history-dropmarker {
+  background-color: #FFFFCB; /* color matches BeOS document color instead of #F5F6BE; */ 
+}
+
+
+.autocomplete-history-dropmarker:hover:active,
+.autocomplete-history-dropmarker[open="true"] {
+  padding-top: 2px;
+  padding-bottom: 0px;
+  -moz-padding-start: 2px;
+  -moz-padding-end: 0px;
+}
+
+#urlbar[level="high"] > .autocomplete-textbox-container,
+#urlbar[level="low"] > .autocomplete-textbox-container,
+#urlbar[level="broken"] > .autocomplete-textbox-container {
+  background-color: #FFFFCB; /* color matches BeOS document color instead of #F5F6BE; */ 
+  color: #000000;
+}
+.autocomplete-history-dropmarker[enablehistory="true"] {                        
+  -moz-binding: url("chrome://global/skin/globalBindings.xml#history-dropmarker")
+  )
+}	
+
+/* ::::: autocomplete popups ::::: */
+
+popup[type="autocomplete"],
+.autocomplete-history-popup {
+  border: 1px solid;
+    -moz-border-top-colors: #888;
+    -moz-border-left-colors: #888;
+    -moz-border-bottom-colors: #aaa;
+    -moz-border-right-colors: #aaa;
+  padding: 0px !important;
+  background-color: #FFFFFF !important;
+}
+
+.autocomplete-history-popup {
+  max-height: 180px;
+}
+
+/* ::::: tree ::::: */
+
+.autocomplete-tree {
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.autocomplete-treecol {
+  margin: 0 !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.autocomplete-treebody::-moz-tree-cell-text {
+  padding-left: 8px;
+}
+
+treechildren.autocomplete-treebody::-moz-tree-row(selected) {
+ background-color: #DDD;
+}
+
+treechildren.autocomplete-treebody::-moz-tree-cell-text(selected) {
+  color: #333 !important; 
+}
+
+/* thunderbird does not use the new autocomplete widget yet so we need a couple of the old styles rules for it */
+
+.autocomplete-treebody::-moz-tree-row(menuactive) {
+  background-color: #9C9C9C;
+}
+
+.autocomplete-treebody::-moz-tree-cell-text(menuactive)  {
+  color: #333 !important;
+}
+
+/* end of thunderbird required autocomplete rules */
+
+/* ::::: textboxes inside toolbarpaletteitems ::::: */
+
+toolbarpaletteitem > toolbaritem > textbox > hbox > hbox > html|*.textbox-input {
+  visibility: hidden;
+}
+
+toolbarpaletteitem > toolbaritem > * > textbox > hbox > hbox > html|*.textbox-input {
+  visibility: hidden;
+}

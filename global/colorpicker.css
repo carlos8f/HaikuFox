@@ -1,0 +1,98 @@
+/*
+ * The contents of this file are subject to the Netscape Public
+ * License Version 1.1 (the "License"); you may not use this file
+ * except in compliance with the License. You may obtain a copy of
+ * the License at http://www.mozilla.org/NPL/
+ *
+ * Software distributed under the License is distributed on an "AS
+ * IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or
+ * implied. See the License for the specific language governing
+ * rights and limitations under the License.
+ *
+ * The Original Code is Mozilla Communicator client code, released
+ * March 31, 1998.
+ *
+ * The Initial Developer of the Original Code is Netscape
+ * Communications Corporation. Portions created by Netscape are
+ * Copyright (C) 1998-1999 Netscape Communications Corporation. All
+ * Rights Reserved.
+ *
+ * Contributor(s):
+ *
+ */
+
+/* ===== colorpicker.css ================================================
+  == Styles used by the XUL colorpicker element.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: colorpicker button ::::: */
+ 
+/* colorpicker button */
+
+colorpicker[type="button"] {
+  width: 35px !important;
+  height: 24px !important;
+  
+  border: 2px solid;
+  border: 2px solid;
+  -moz-border-top-colors: #BABABA #FFFFFF;
+  -moz-border-right-colors: #616161 #9A9A9A;
+  -moz-border-bottom-colors: #616161 #9A9A9A;
+  -moz-border-left-colors: #BABABA #FFFFFF;
+  background-color: #DCDCDC;
+  padding: 0;
+}
+
+.colorpicker-button-colorbox {
+  width: 31px !important;
+  height: 20px !important;
+  
+  background: transparent url("chrome://global/skin/colorpicker/color-back.gif") top left no-repeat;
+}
+
+colorpicker[type="button"]:focus {
+  border: 2px solid;
+  -moz-border-top-colors: #616161 #FFFFFF;
+  -moz-border-right-colors: #616161 #9A9A9A;
+  -moz-border-bottom-colors: #616161 #9A9A9A;
+  -moz-border-left-colors: #616161 #FFFFFF;
+}
+
+colorpicker[type="button"][open="true"] {
+  border: 2px solid;
+  -moz-border-top-colors: #616161 #FFFFFF;
+  -moz-border-right-colors: #616161 #9A9A9A;
+  -moz-border-bottom-colors: #616161 #9A9A9A;
+  -moz-border-left-colors: #616161 #FFFFFF;
+}
+
+colorpicker[type="button"][open="true"] > .colorpicker-button-colorbox {
+  background: transparent url("chrome://global/skin/colorpicker/color-back-press.gif") top left no-repeat !important;
+}
+
+/* ::::: colorpicker tiles ::::: */
+
+.colorpickertile {
+  width                 : 20px;
+  height                : 20px;
+  margin                : 1px;
+  border-left           : 1px solid #9A9A9A;
+  border-top            : 1px solid #9A9A9A;
+  border-right          : 1px solid #FFFFFF;
+  border-bottom         : 1px solid #FFFFFF;
+}
+
+.colorpickertile[selected="true"] {
+  border : 2px outset #C0C0C0;
+
+}
+
+.colorpickertile[hover="true"] {
+  border : 2px dotted #FFFFFF;
+}
+
+.cp-light[hover="true"] {
+  border : 2px dotted #909090;
+}

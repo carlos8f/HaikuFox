@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+
+<bindings id="splitterBindings"
+          xmlns="http://www.mozilla.org/xbl"
+          xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+          xmlns:xbl="http://www.mozilla.org/xbl">
+
+  <!-- :::/ splitters \ ::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+  <binding id="splitter" extends="chrome://global/content/bindings/splitter.xml#splitter">
+    <content>
+      <grippy xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"/>
+    </content>
+  </binding>
+
+  <!-- :::::::/ Firefox sidebar splitter \ ::::::::::::::::::::::::::::::::: -->
+
+  <binding id="sidebar-splitter" extends="chrome://global/content/bindings/splitter.xml#splitter">
+    <content orient="horizontal"
+             collapse="before"
+             style="">
+      <grippy xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"/>
+    </content>
+  </binding>
+
+  <!-- :::::::/ Firefox sidebar splitter \ ::::::::::::::::::::::::::::::::: -->
+
+  <binding id="sb-splitter" extends="chrome://global/content/bindings/splitter.xml#splitter">
+    <content orient="horizontal"
+             collapse="before"
+             style="">
+      <grippy xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"/>
+    </content>
+  </binding>
+
+  <!-- :::::::/ Firefox download splitter \ ::::::::::::::::::::::::::::::: -->
+
+  <binding id="dl-splitter" extends="chrome://global/content/bindings/splitter.xml#splitter">
+    <content orient="vertical"
+             collapse="before"
+             style="">
+      <grippy xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"/>
+    </content>
+  </binding>
+
+  <!-- :::::::/ Firefox help splitter \ ::::::::::::::::::::::::::::::: -->
+
+  <binding id="help-splitter" extends="chrome://global/content/bindings/splitter.xml#splitter">
+    <content orient="horizontal"
+             collapse="before"
+             style="">
+      <grippy xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"/>
+    </content>
+  </binding>
+  
+</bindings>
+

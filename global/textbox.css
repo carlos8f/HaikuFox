@@ -1,0 +1,111 @@
+/*
+ * The contents of this file are subject to the Netscape Public
+ * License Version 1.1 (the "License"); you may not use this file
+ * except in compliance with the License. You may obtain a copy of
+ * the License at http://www.mozilla.org/NPL/
+ *
+ * Software distributed under the License is distributed on an "AS
+ * IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or
+ * implied. See the License for the specific language governing
+ * rights and limitations under the License.
+ *
+ * The Original Code is Mozilla Communicator client code, released
+ * March 31, 1998.
+ *
+ * The Initial Developer of the Original Code is Netscape
+ * Communications Corporation. Portions created by Netscape are
+ * Copyright (C) 1998-2001 Netscape Communications Corporation. All
+ * Rights Reserved.
+ *
+ * Contributor(s):
+ *   Joe Hewitt (hewitt@netscape.com)
+ */
+
+/* ===== textbox.css ==================================================
+  == Styles used by the XUL textbox element.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+/* ::::: textbox ::::: */
+
+
+textbox {
+  cursor: text;
+  margin: 2px 4px;
+  border: 2px solid;
+    -moz-border-top-colors: #9A9A9A #616161 !important;
+    -moz-border-left-colors: #9A9A9A #616161 !important;
+    -moz-border-right-colors: #FFFFFF #DCDCDC !important;
+    -moz-border-bottom-colors: #FFFFFF #DCDCDC !important;
+  padding: 2px 2px 3px 4px;
+  background-color: #FFFFFF;
+  color: black;
+}
+
+textbox:focus,
+textbox:active,
+textbox[selected="true"][current="true"] {
+    -moz-border-top-colors: #BABABA #0000E7 !important;
+    -moz-border-left-colors: #BABABA #0000E7 !important;
+    -moz-border-right-colors: #FFFFFF #0000E7 !important;
+    -moz-border-bottom-colors: #FFFFFF #0000E7 !important;
+}
+
+html|*.textbox-input, 
+html|*.textbox-textarea {
+  margin: 0px !important;
+  border: 0px !important;
+  padding: 0px !important;
+  background-color: inherit;
+  color: inherit;
+  font: inherit;
+}
+
+.textbox-input-box menupopup {
+  cursor: default;
+}
+
+/* ..... readonly state ..... */
+
+textbox[readonly="true"] {
+  border: 2px solid;
+    -moz-border-top-colors: #9A9A9A #616161;
+    -moz-border-left-colors: #9A9A9A #616161;
+    -moz-border-right-colors: #FFFFFF #DCDCDC;
+    -moz-border-bottom-colors: #FFFFFF #DCDCDC;
+
+  background: transparent;
+  color: #808080;
+}
+
+/* ..... disabled state ..... */
+
+textbox[disabled="true"] {
+  border: 2px solid;
+    -moz-border-top-colors: #9A9A9A #616161;
+    -moz-border-left-colors: #9A9A9A #616161;
+    -moz-border-right-colors: #FFFFFF #DCDCDC;
+    -moz-border-bottom-colors: #FFFFFF #DCDCDC;
+
+  cursor: default;
+  background-color: #EEE;
+  color: #999;
+}
+
+/* ::::: plain textbox ::::: */
+
+textbox.plain {
+  -moz-appearance: none !important;
+  padding: 0px !important;
+  margin: 0px !important;
+  border: none !important;
+}
+
+/* ::::: textboxes inside toolbarpaletteitems ::::: */
+
+toolbarpaletteitem > toolbaritem > textbox > .textbox-input-box > html|*.textbox-input {
+  visibility: hidden;
+}
+

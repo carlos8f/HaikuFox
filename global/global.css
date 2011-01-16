@@ -1,0 +1,173 @@
+/*
+ * The contents of this file are subject to the Netscape Public
+ * License Version 1.1 (the "License"); you may not use this file
+ * except in compliance with the License. You may obtain a copy of
+ * the License at http://www.mozilla.org/NPL/
+ *
+ * Software distributed under the License is distributed on an "AS
+ * IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or
+ * implied. See the License for the specific language governing
+ * rights and limitations under the License.
+ *
+ * The Original Code is Mozilla Communicator client code, released
+ * March 31, 1998.
+ *
+ * The Initial Developer of the Original Code is Netscape
+ * Communications Corporation. Portions created by Netscape are
+ * Copyright (C) 1998-1999 Netscape Communications Corporation. All
+ * Rights Reserved.
+ *
+ * Contributor(s):
+ *
+ */
+
+/* ===== global.css =====================================================
+  == Styles that apply everywhere.
+  ======================================================================= */
+
+/* all localizable skin settings shall live here */
+@import url("chrome://global/locale/intl.css");
+@import url("chrome://global/skin/formatting.css");
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: XBL bindings ::::: */
+
+radio {
+  -moz-binding: url("chrome://global/skin/globalBindings.xml#radio");
+}
+
+menulist > menupopup,
+.menulist-menupopup {
+  -moz-binding: url("chrome://global/content/bindings/popup.xml#popup-scrollbars");
+}
+
+.menulist-compact {
+  -moz-binding: url("chrome://global/content/bindings/menulist.xml#menulist-compact");
+}
+
+
+/* ::::: root elements ::::: */
+
+
+window,
+page,
+dialog,
+wizard,
+prefwindow {
+  background-color: #DDDDDD;
+  color: black;
+  font: message-box;
+  /*font: menu;*/
+}
+
+window.dialog {
+  padding: 8px 10px 10px 8px;
+}
+
+[wait-cursor] {
+  cursor: wait !important;
+}
+
+
+
+/* ::::: alert icons :::::*/
+
+.message-icon,
+.alert-icon,
+.error-icon,
+.question-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.message-icon {
+  list-style-image: url("chrome://global/skin/alerts/alert-info.png");
+}
+
+.alert-icon {
+  list-style-image: url("chrome://global/skin/alerts/alert-exclaim.png");
+}
+
+.error-icon {
+  list-style-image: url("chrome://global/skin/alerts/alert-error.png");
+}
+
+.question-icon {
+  list-style-image: url("chrome://global/skin/alerts/alert-question.png");
+}
+
+
+/* ::::: iframe ::::: */
+
+iframe {
+  border: none;
+  width: 100px;
+  height: 100px;
+  min-width: 10px;
+  min-height: 10px;
+}
+
+
+/* ::::: statusbar ::::: */
+
+statusbar {
+  border: 0;
+  border-top: 2px solid;
+  -moz-border-top-colors: #9A9A9A #FFFFFF;
+  background-color: #DDDDDD;
+  min-height: 11px;
+}
+
+statusbarpanel {
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  padding: 0 4px;
+}
+
+* + statusbarpanel {
+}
+
+.statusbar-resizerpanel {
+  -moz-box-align: end;
+  -moz-box-pack: end;
+  padding: 0px;
+}
+
+.statusbarpanel-iconic,  .statusbarpanel-iconic-text, .statusbarpanel-menu-iconic {
+  padding: 0px 1px 0px 1px;
+}
+
+resizer[dir="bottomright"] {
+  background: transparent url("chrome://global/skin/window/status-resize.png") no-repeat bottom right;
+  width: 13px;
+  height: 13px;
+  cursor: se-resize;
+}
+
+
+/* ::::: sidebar ::::: */
+
+sidebarheader {
+  height: 25px;
+  background-color: #DCDCDC;
+  border-bottom: 1px solid #9A9A9A;
+  border-top: 1px solid #FFFFFF;
+}
+
+sidebarheader > label {
+  -moz-padding-start: 4px;
+}
+
+#sidebar-throbber[loading="true"] {
+   list-style-image: url("chrome://global/skin/subskin/throbber16-anim.gif") !important;
+   margin: 2px 2px 0px !important;
+   display: block !important;
+   height: 16px !important;
+   width: 16px !important;
+   }
+
+/* ::::: miscellaneous ::::: */
+
+.toolbar-focustarget {
+  -moz-user-focus: ignore !important;
+}

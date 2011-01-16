@@ -1,0 +1,88 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1/GPL 2.0/LGPL 2.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is Netscape 6.1 Sky Pilot theme.
+ *
+ * The Initial Developer of the Original Code is Kevin Cunningham, aka kang.
+ * Portions created by the Kevin Cunningham are Copyright (C) 2001 Kevin Cunningham.
+ * All Rights Reserved.
+ *
+ * Contributor(s):
+ *   Kevin Cunningham, "kang" <kangaroo@asan.com>, designer and original author
+ *
+ * for this version only:
+ *   Sailfish, sailfish@unforgettable.com, new graphics design and porter of this version
+ *   grayrest, grayrest@grayrest.com, new graphics design and Quality Verification
+ *   KAMiKAZOW, kamikazow@gmx.de, new graphics design and Quality Verification
+ *   Aardvark Freak, webmaster@aardvarkind.com, Quality Verification
+ *   beejmartin, beejmart@swbell.net, Quality Verification
+ *   Jim S, JimSchellenberg@netscape.net, Quality Verification
+ *   Michael Vaughn, michael_l_vaughn@hotmail.com, Quality Verification
+ *   Gordon Wright, gwright@rochester.rr.com, Quality Verification
+ *
+ * Alternatively, the contents of this file may be used under the terms of
+ * either the GNU General Public License Version 2 or later (the "GPL"), or
+ * the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+ * in which case the provisions of the GPL or the LGPL are applicable instead
+ * of those above. If you wish to allow use of your version of this file only
+ * under the terms of either the GPL or the LGPL, and not to allow others to
+ * use your version of this file under the terms of the MPL, indicate your
+ * decision by deleting the provisions above and replace them with the notice
+ * and other provisions required by the GPL or the LGPL. If you do not delete
+ * the provisions above, a recipient may use your version of this file under
+ * the terms of any one of the MPL, the GPL or the LGPL.
+ *
+  * ***** END LICENSE BLOCK ***** */
+
+/* ===== SPCendcapoverlay.css =====================================================
+  == Styles that apply to Sky Pilot Classic primary toolbar.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: toolbarpaletteitem ::::: */
+
+.toolbar-primary {
+  -moz-binding: url("chrome://global/skin/globalBindings.xml#toolbar_bookends");
+}
+
+#BrowserToolbarPalette {
+}
+
+#SPCleft-prtb-cap {
+  border-left: 1px solid #999999;
+  background: url("chrome://global/skin/toolbar/prtb-left.gif") #888888 no-repeat;
+  width: 13px;
+  max-height: 48px;
+}
+
+#SPCleft-prtb-cap[iconsize="small"][mode="icons"],
+#SPCleft-prtb-cap[iconsize="small"][mode="text"],
+#SPCleft-prtb-cap:not([iconsize="small"])[mode="text"],
+#main-window[chromehidden~="toolbar"] #SPCleft-prtb-cap {
+  background: #888888 no-repeat;
+}
+
+#SPCright-prtb-cap {
+  background: #888888 no-repeat;
+  width: 13px;
+}
+
+#SPCright-prtb-cap[iconsize="small"][mode="icons"],
+#SPCright-prtb-cap[iconsize="small"][mode="text"],
+#SPCright-prtb-cap:not([iconsize="small"])[mode="text"],
+#main-window[chromehidden~="toolbar"] #SPCright-prtb-cap {
+  background: #888888 no-repeat;
+}
+
+

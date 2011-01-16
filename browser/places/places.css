@@ -1,0 +1,225 @@
+/* Root View */
+#placesView {
+}
+
+#splitter {
+  border: 0px;
+  width: 3px;
+}
+
+
+/* Place List, Place Content */
+.placesTree {
+  margin: 0px;
+}
+
+#placesList {
+  width: 248px !important;
+  margin-left: 5px;
+  margin-right: 0px;
+}
+
+#placesListContainer {
+  -moz-appearance: listbox;
+  margin: 7px 0px 7px 6px;
+}
+
+#placeContent {
+  -moz-appearance: none;
+}
+
+#content {
+  margin-top: 7px;
+  -moz-appearance: listbox;
+}
+
+treechildren::-moz-tree-image(title, container) {
+  padding-right: 2px;
+  margin: 0px 2px;
+  list-style-image: url("chrome://global/skin/icons/folder-item.png") !important;
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+treechildren::-moz-tree-image(title, container) {
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+treechildren::-moz-tree-image(title, open) {
+  -moz-image-region: rect(16px, 32px, 32px, 16px);
+}
+
+treechildren::-moz-tree-row(session-start) {
+  border-top:1px ;
+}
+
+treechildren::-moz-tree-image(title, separator) {
+  list-style-image: none;
+  width: 0px !important;
+  height: 0px !important;
+  margin: 0px;
+}
+
+treechildren::-moz-tree-cell-text(title, separator) {
+  color: ThreeDShadow;
+  margin: 0px 5px;
+}
+
+treechildren::-moz-tree-cell-text(title, separator, selected, focus) {
+  color: HighlightText;
+}
+
+/* Command Bar */
+
+/* Title Bar */
+#showingPrefix {
+  margin: 5px 0.33em 5px 8px;
+}
+
+#contentTitle {
+  margin: 5px 8px 5px 0px;
+  font-weight: bold;
+}
+
+/* Search Bar */
+#searchbar {
+}
+
+.small {
+  font-size: x-small;
+  min-width: 160px;
+  padding: 0px 4px 0px 4px;
+  margin: 0px;  
+  border: 0px;
+}
+
+.small .button-text,
+.small .button-box {
+  padding: 0px;
+  border: 0px;
+}
+
+#searchFilter {
+  padding: 0px;
+  width: 250px !important;
+  max-width: 250px !important;
+}
+
+#searchFilter[empty="true"] {
+  color: GrayText;
+}
+
+#searchFilter .textbox-input-box {
+  padding: 2px 2px 3px 4px;
+}
+
+.filterList {
+  -moz-appearance: none;
+  background-color: transparent;
+  border: 0px;
+  margin: 2px;
+  padding: 0px;
+  min-width: 0px;
+  width: 16px;
+  height: 16px;
+  list-style-image: url("chrome://browser/skin/Search.png");
+  -moz-image-region: rect(0px 16px 16px 0px);
+  -moz-user-focus: ignore;
+  cursor: default;
+}
+
+.filterList .button-box {
+  border: 0px;
+  padding: 0px;
+}
+
+.filterList .button-menu-dropmarker {
+  margin: 9px -3px -4px 8px;
+  list-style-image: url("chrome://browser/skin/global/arrow/arrow-menulist.gif");
+}
+
+
+#toolbarNewFolder {
+  list-style-image: url("chrome://browser/skin/places/placesIcon.png");
+  -moz-image-region: rect(0px 32px 16px 16px);
+}
+
+#toolbarNewFolder:hover {
+  list-style-image: url("chrome://browser/skin/places/placesIcon.png");
+  -moz-image-region: rect(16px 32px 32px 16px);
+}
+
+
+#toolbarDelete {
+  list-style-image: url("chrome://browser/skin/places/placesIcon.png");
+  -moz-image-region: rect(0px 48px 16px 32px);
+}
+
+#toolbarDelete:hover {
+  list-style-image: url("chrome://browser/skin/places/placesIcon.png");
+  -moz-image-region: rect(16px 48px 32px 32px);
+}
+
+#toolbarDelete[disabled="true"] {
+  list-style-image: url("chrome://browser/skin/places/placesIcon.png");
+  -moz-image-region: rect(32px 48px 48px 32px);
+}
+
+#toolbarGroup {
+}
+
+
+/* Calendar */
+.history-calendar {
+}
+
+.calendar-box {
+}
+
+.calendar-header {
+}
+
+.calendar-month-jump {
+  padding-left:6px;
+  padding-right:6px;
+}
+.calendar-month-jump:hover {
+  font-weight: bold;
+}
+.calendar-grid {
+  padding-left:8px;
+  padding-right:8px;
+  padding-bottom:4px;
+}
+.calendar-grid label { /* everything in the calendar grid */
+  text-align:right;
+}
+.calendar-month-title {
+  text-align:center;
+}
+
+.calendar-day { /* just days (excluding the day headers) */
+}
+
+.calendar-day[selected="true"] {
+  background-color:#FFFF58;
+}
+.calendar-day[selected="true"]:hover {
+  background-color:#FFFF58;
+}
+
+.calendar-day[month="this"] {
+  color:black;
+}
+.calendar-day[month="other"] {
+  color:#989898;
+}
+
+.calendar-day:hover {
+  background-color:#9C9C9C;
+  color:black;
+}
+
+.no-margin-button {
+  min-width:0em;
+}
+

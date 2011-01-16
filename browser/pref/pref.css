@@ -1,0 +1,265 @@
+/*
+# -*- Mode: Java; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*-
+# Version: MPL 1.1/GPL 2.0/LGPL 2.1
+# 
+# The contents of this file are subject to the Mozilla Public License Version
+# 1.1 (the "License"); you may not use this file except in compliance with
+# the License. You may obtain a copy of the License at
+# http://www.mozilla.org/MPL/
+# 
+# Software distributed under the License is distributed on an "AS IS" basis,
+# WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+# for the specific language governing rights and limitations under the
+# License.
+# 
+# The Original Code is Mozilla.org Code.
+# 
+# The Initial Developer of the Original Code is
+# Doron Rosenberg.
+# Portions created by the Initial Developer are Copyright (C) 2001
+# the Initial Developer. All Rights Reserved.
+# 
+# Contributor(s):
+#	Ben Goodger <ben@netscape.com> (Original Author)
+# 
+# Alternatively, the contents of this file may be used under the terms of
+# either the GNU General Public License Version 2 or later (the "GPL"), or
+# the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+# in which case the provisions of the GPL or the LGPL are applicable instead
+# of those above. If you wish to allow use of your version of this file only
+# under the terms of either the GPL or the LGPL, and not to allow others to
+# use your version of this file under the terms of the MPL, indicate your
+# decision by deleting the provisions above and replace them with the notice
+# and other provisions required by the GPL or the LGPL. If you do not delete
+# the provisions above, a recipient may use your version of this file under
+# the terms of any one of the MPL, the GPL or the LGPL.
+# 
+# ***** END LICENSE BLOCK *****
+*/
+
+/***************************************************************************************/
+
+/* :::: end :::: */
+
+#prefDialog{
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+
+  background: #DDDDDD;
+}
+
+#prefDialog > separator {
+  height: 2px;
+
+  margin-bottom: 5px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 5px;
+
+  background-color: #transparent;
+}
+
+#prefsCategories {
+  margin: 0;
+  border: 0;
+
+  width: 100px !important;
+  
+  color: #333;
+
+  background-color: #fff;
+
+  border: 5px solid;
+    -moz-border-top-colors: #0000E7 #DDDDDD #BCBCBC #9A9A9A #fff;
+    -moz-border-left-colors: #0000E7 #DDDDDD #BCBCBC #9A9A9A #fff;
+    -moz-border-right-colors: #0000E7 #DDDDDD #fff #9A9A9A #fff;
+    -moz-border-bottom-colors: #0000E7 #DDDDDD #fff #9A9A9A #fff;
+
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+#header{
+  height: 15px;
+  
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  color: #000;
+  background: #DDDDDD;
+}
+
+#header > .dialogheader-title{
+  height: 15px;
+  
+  margin: 0;
+  padding: 0;
+
+  font-family: "Swiss", "Arial", "Tahoma" sans serif;
+  font-size: 12px;
+  font-weight: bold;
+  
+  background: #DDDDDD;
+}
+
+#panelFrame{
+  background: #DDDDDD;
+
+  margin: 0;
+  margin-right: 5px;
+  margin-bottom: 4px;
+  
+  padding: 4px;
+  padding-left: 0;
+  padding-right: 0;
+    
+  border: 0;
+  border-top: 2px solid; border-bottom: 2px solid;
+    -moz-border-top-colors: #9A9A9A #fff;
+    -moz-border-left-colors: #9A9A9A #FFF;
+    -moz-border-right-colors: #fff #9A9A9A;
+    -moz-border-bottom-colors: #fff #9A9A9A;
+}
+
+/***************************************************************************************/
+
+.buttonBoxButton {
+  -moz-outline: none !important;
+  -moz-appearance: none !important;
+  text-align: left;
+  color: #000;
+  font-weight: normal;
+  list-style-image: url("chrome://browser/skin/preferences/Options.png");
+  background: #fff; 
+  border: 0;
+  margin: 0;
+  padding: 1px;
+  margin-bottom: 3px;
+}
+
+  .buttonBoxButton > .button-box {
+    border: 0;
+    margin: 0;
+    padding: 1px;
+  }
+
+  .buttonBoxButton > .button-box > .button-icon {
+    border: 0;
+    margin: 0;
+    padding: 1px;
+    margin-bottom: 1px;
+  }
+
+.buttonBoxButton:focus,
+.buttonBoxButton:hover {
+    padding: 1px !important;
+  }
+
+.buttonBoxButton[checked="true"] {
+  padding: 1px !important;
+  background: #9A9A9A;
+}
+
+#catGeneralButton  {
+	-moz-image-region: rect(0px, 18px,  18px, 0px)
+}
+#catGeneralButton:hover, #catGeneralButton[checked="true"]  {
+	-moz-image-region: rect(18px, 18px,  36px, 0px)
+}
+
+#catPrivacyButton  {
+	-moz-image-region: rect(0px, 36px,  18px, 18px)
+}
+#catPrivacyButton:hover, #catPrivacyButton[checked="true"]  {
+	-moz-image-region: rect(18px, 36px,  36px, 18px)
+}
+
+#catFeaturesbutton  {
+	-moz-image-region: rect(0px, 54px,  18px, 36px)
+}
+#catFeaturesbutton:hover, #catFeaturesbutton[checked="true"]  {
+	-moz-image-region: rect(18px, 54px,  36px, 36px)
+}
+
+#catDownloadsButton	  {
+	-moz-image-region: rect(0px, 72px, 18px, 54px)
+}
+#catDownloadsButton:hover, #catDownloadsButton[checked="true"] {
+	-moz-image-region: rect(18px, 72px, 36px, 54px)
+}
+
+#catAdvancedButton  {
+	-moz-image-region: rect(0px, 90px, 18px, 72px)
+}
+#catAdvancedButton:hover, #catAdvancedButton[checked="true"] {
+	-moz-image-region: rect(18px, 90px, 36px, 72px)
+}
+/***************************************************************************************/
+
+/** Privacy Panel Expander Box **/
+.privacyCategories {
+  margin: 5px;	
+  padding: 5px;
+}
+
+/* Themes/Extensions Items */
+.themesLink {
+  text-decoration: underline;
+  color: #06E;
+  cursor: pointer;
+}
+
+.themesLink:active,
+.themesLink:hover {
+  color: red;
+}
+
+#previewImageContainer {
+  height: 93px; 
+  padding: 1px;
+}
+
+#previewImage {
+  max-width: 355px; 
+  min-width: 355px;
+  max-height: 85px;
+  min-height: 85px;
+}
+
+.extensionInfoArea {
+  background-color: #FFF !important; 
+  height: 14em;
+}
+
+/* :::: Advanced :::: */
+
+.settingsBox
+{
+  background: #f0f0f0;
+  
+  margin: 0;
+  padding: 0;
+  padding-bottom: 4px;
+}
+
+expander {
+  -moz-appearance: none;
+  border: 2px solid;
+    -moz-border-right-colors: #fff #BCBCBC transparent;
+    -moz-border-bottom-colors: #fff #BCBCBC transparent;
+  border-top: 3px solid;
+    -moz-border-top-colors: transparent #9A9A9A #BCBCBC transparent;
+  border-left: 4px solid;
+    -moz-border-left-colors: transparent #9A9A9A #BCBCBC transparent;
+
+  margin: 4px;
+  margin-bottom: 0px;
+  padding: 4px;
+
+  background: #DDDDDD;
+
+  color: #333;
+}

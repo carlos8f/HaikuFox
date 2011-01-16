@@ -1,0 +1,12 @@
+/* Generic RichView */
+
+view {
+  margin: 10px 10px 5px 10px;
+  -moz-user-focus: normal;
+  background-color: #FFFFFF;
+}
+
+.richviewInner {
+/*  background-image: url("chrome://mozapps/skin/shared/viewFader.png"); */
+  padding: 0px;
+}  

@@ -1,0 +1,327 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1/GPL 2.0/LGPL 2.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is Mozilla Communicator client code, released
+ * March 31, 1998.
+ *
+ * The Initial Developer of the Original Code is
+ * Netscape Communications Corporation.
+ * Portions created by the Initial Developer are Copyright (C) 1998-2001
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ *   Joe Hewitt (hewitt@netscape.com)
+ *
+ * Alternatively, the contents of this file may be used under the terms of
+ * either the GNU General Public License Version 2 or later (the "GPL"), or
+ * the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+ * in which case the provisions of the GPL or the LGPL are applicable instead
+ * of those above. If you wish to allow use of your version of this file only
+ * under the terms of either the GPL or the LGPL, and not to allow others to
+ * use your version of this file under the terms of the MPL, indicate your
+ * decision by deleting the provisions above and replace them with the notice
+ * and other provisions required by the GPL or the LGPL. If you do not delete
+ * the provisions above, a recipient may use your version of this file under
+ * the terms of any one of the MPL, the GPL or the LGPL.
+ *
+ * ***** END LICENSE BLOCK ***** */
+
+/* ===== xulscrollbars.css ==============================================
+  == Styles used by XUL scrollbar-related elements.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml"); /* namespace for HTML elements */
+
+/* ::::: scrollbar ::::: */
+
+scrollbar {
+  /* don't use native OS appearance
+  -moz-appearance: scrollbartrack-horizontal; */
+  -moz-binding: url("chrome://global/content/bindings/scrollbar.xml#scrollbar");
+  cursor: default;
+  background: url("chrome://global/skin/scrollbar/slider-horizontal.png") scrollbar;
+  margin-right: -1px;
+}
+
+scrollbar[disabled="true"] {
+  background: url("chrome://global/skin/scrollbar/slider-horizontal-disabled.png") scrollbar;
+}
+  
+scrollbar[orient="vertical"] {
+  /* don't use native OS appearance
+  -moz-appearance: scrollbartrack-vertical; */
+  -moz-binding: url("chrome://global/content/bindings/scrollbar.xml#scrollbar");
+  cursor: default;
+  background: url("chrome://global/skin/scrollbar/slider-vertical.png") scrollbar;
+  margin-bottom: -1px;
+}
+
+scrollbar[orient="vertical"][disabled="true"] {
+  background: url("chrome://global/skin/scrollbar/slider-vertical-disabled.png") scrollbar;
+}
+  
+/* ::::: borders for thumb and buttons ::::: */
+
+thumb {
+  min-height: 26px;
+  min-width: 15px;
+  border: 2px solid;
+  -moz-border-left-colors: #989898 #FFFFFF;
+  -moz-border-bottom-colors: #606060 #B8B8B8;
+  border-top: 1px solid;
+  -moz-border-top-colors: #FFFFFF;
+  border-right: 1px solid;
+  -moz-border-right-colors: #B8B8B8;
+  -moz-border-radius-topright: 0px;
+  -moz-border-radius-bottomright: 0px;
+  -moz-border-radius-topleft: 1px;
+  -moz-border-radius-bottomleft: 1px;
+  background: #D8D8D8 url("chrome://global/skin/scrollbar/thumb-grip-vertical.png") no-repeat center center;
+}
+
+scrollbarbutton {
+	border: 0px solid;
+}
+
+/* ::::: thumb (horizontal) ::::: */
+
+thumb[orient="horizontal"] {
+  min-height: 15px;
+  min-width: 26px;
+  border: 1px solid;
+  -moz-border-left-colors: #FFFFFF;
+  -moz-border-bottom-colors: #B8B8B8;
+  border-top: 2px solid;
+  -moz-border-top-colors: #989898 #FFFFFF;
+  border-right: 2px solid;
+  -moz-border-right-colors: #606060 #B8B8B8;
+  -moz-border-radius-topright: 1px;
+  -moz-border-radius-bottomleft: 1px;
+  -moz-border-radius-topleft: 0px;
+  -moz-border-radius-bottomright: 0px;
+  background: #D8D8D8 url("chrome://global/skin/scrollbar/thumb-grip-horizontal.png") no-repeat center center;
+}
+ 
+/* don't use moz-appearance so the theme displays BeOS thumb grips, not native OS
+thumb > gripper {
+  -moz-appearance: scrollbargripper-vertical;
+}
+
+thumb[orient="horizontal"] > gripper {
+  -moz-appearance: scrollbargripper-horizontal;
+} */
+
+/* ::::: scrollbar button ::::: */
+
+scrollbarbutton {
+  width: 15px;
+  height: 14px;
+}
+
+scrollbarbutton:hover:active {
+}
+
+scrollbar[orient="vertical"] > scrollbarbutton {
+  width: 14px;
+  height: 15px;
+}
+
+
+/* ::::: square at the corner of two scrollbars ::::: */
+
+scrollcorner { 
+  border: 1px solid #9A9A9A;
+  border-right: 0;
+  border-bottom: 0;
+  background-color: #D8D8D8;
+}
+
+/* ..... increment .... */
+
+scrollbarbutton[type="increment"] {
+  background-image: url("chrome://global/skin/scrollbar/button-horizontal-right.png");
+}
+
+  scrollbarbutton[type="increment"]:hover:active {
+    background-image: url("chrome://global/skin/scrollbar/button-horizontal-rightd.png");
+  }
+
+  scrollbarbutton[type="increment"][disabled="true"] {
+    background-image: url("chrome://global/skin/scrollbar/button-horizontal-right-disabled.png");
+  }
+
+  scrollbarbutton[type="increment"][disabled="true"]:hover:active {
+    background-image: url("chrome://global/skin/scrollbar/button-horizontal-right-disabled.png");
+  }
+
+scrollbar[orient="vertical"] > scrollbarbutton[type="increment"] {
+  background-image: url("chrome://global/skin/scrollbar/button-vertical-down.png");
+  margin-top: -1px;
+  border-bottom: 1px solid #9A9A9A;
+}
+
+  scrollbar[orient="vertical"] > scrollbarbutton[type="increment"]:hover:active {
+    background-image: url("chrome://global/skin/scrollbar/button-vertical-downd.png");
+  }
+
+  scrollbar[orient="vertical"] > scrollbarbutton[type="increment"][disabled="true"] {
+    background-image: url("chrome://global/skin/scrollbar/button-vertical-down-disabled.png");
+  }
+
+  scrollbar[orient="vertical"] > scrollbarbutton[type="increment"][disabled="true"]:hover:active {
+    background-image: url("chrome://global/skin/scrollbar/button-vertical-down-disabled.png");
+  }
+
+/* ..... decrement .... */
+
+scrollbarbutton[type="decrement"] {
+   background-image: url("chrome://global/skin/scrollbar/button-horizontal-left.png");
+   margin-right: -1px;
+}
+
+  scrollbarbutton[type="decrement"]:hover:active {
+     background-image: url("chrome://global/skin/scrollbar/button-horizontal-leftd.png");
+  }
+
+  scrollbarbutton[type="decrement"][disabled="true"] {
+     background-image: url("chrome://global/skin/scrollbar/button-horizontal-left-disabled.png");
+  }
+
+  scrollbarbutton[type="decrement"][disabled="true"]:hover:active {
+     background-image: url("chrome://global/skin/scrollbar/button-horizontal-left-disabled.png");
+  }
+
+scrollbar[orient="vertical"] > scrollbarbutton[type="decrement"] {
+   background-image: url("chrome://global/skin/scrollbar/button-vertical-up.png");
+}
+
+  scrollbar[orient="vertical"] > scrollbarbutton[type="decrement"]:hover:active {
+     background-image: url("chrome://global/skin/scrollbar/button-vertical-upd.png");
+  }
+
+  scrollbar[orient="vertical"] > scrollbarbutton[type="decrement"][disabled="true"] {
+     background-image: url("chrome://global/skin/scrollbar/button-vertical-up-disabled.png");
+  }
+
+  scrollbar[orient="vertical"] > scrollbarbutton[type="decrement"][disabled="true"]:hover:active {
+     background-image: url("chrome://global/skin/scrollbar/button-vertical-up-disabled.png");
+  }
+
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* ::::::::::::::::::::: MEDIA PRINT :::::::::::::::::::::: */
+/* :::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+@media print {
+  /* ::::: scrollbar ::::: */
+
+  html|div scrollbar {
+    -moz-appearance: scrollbartrack-horizontal;
+    -moz-binding: url("chrome://global/content/bindings/scrollbar.xml#scrollbar");
+    cursor: default;
+    background: url("chrome://global/skin/scrollbar/slider.gif") scrollbar;
+  }
+
+  html|div scrollbar[orient="vertical"] 
+  {
+     -moz-appearance: scrollbartrack-vertical;
+  }
+
+  /* ::::: borders for thumb and buttons ::::: */
+
+  html|div thumb,
+  html|div scrollbarbutton {
+	border: 2px solid;
+	-moz-border-top-colors: #BABABA #FFFFFF;
+	-moz-border-right-colors: #616161 #9A9A9A;
+	-moz-border-bottom-colors: #616161 #9A9A9A;
+	-moz-border-left-colors: #BABABA #FFFFFF;
+	background-color: #DDDDDD;
+  }
+
+  /* ::::: thumb (horizontal) ::::: */
+
+  html|div thumb {
+    -moz-appearance: scrollbarthumb-vertical;
+    min-height: 8px;
+  }
+
+  html|div thumb[orient="horizontal"] {
+    -moz-appearance: scrollbarthumb-horizontal;
+    min-width: 8px;
+  }
+
+  html|div thumb > gripper {
+    background-image: url("chrome://global/skin/scrollbar/thumb-grip-vertical.png") ;
+ }
+
+  html|div thumb[orient="horizontal"] > gripper {
+    background-image: url("chrome://global/skin/scrollbar/thumb-grip-horizontal.png") ;
+    }
+
+  /* ::::: scrollbar button ::::: */
+
+  html|div scrollbarbutton {
+	background: #D8D8D8 no-repeat 0px 1px;
+    min-width: 16px;
+    min-height: 16px;
+  }
+
+  html|div scrollbarbutton:hover:active {
+	-moz-border-top-colors: #9A9A9A #D8D8D8;
+	-moz-border-right-colors: #9A9A9A #D8D8D8;
+	-moz-border-bottom-colors: #9A9A9A #D8D8D8;
+	-moz-border-left-colors: #9A9A9A #D8D8D8;
+	background-position: 1px 2px;
+  }
+
+  /* ..... increment .... */
+
+  html|div scrollbarbutton[type="increment"] {
+    -moz-appearance: scrollbarbutton-right;
+    background-image: url("chrome://global/skin/arrow/arrow-rit.gif")
+  }
+
+  html|div scrollbarbutton[type="increment"][disabled="true"] {
+    background-image: url("chrome://global/skin/arrow/arrow-rit-dis.gif")
+  }
+
+  html|div scrollbar[orient="vertical"] > scrollbarbutton[type="increment"] {
+    -moz-appearance: scrollbarbutton-down;
+    background-image: url("chrome://global/skin/arrow/arrow-dn.gif")
+  }
+
+  html|div scrollbar[orient="vertical"] > scrollbarbutton[type="increment"][disabled="true"] {
+    background-image: url("chrome://global/skin/arrow/arrow-dn-dis.gif")
+  }
+
+  /* ..... decrement .... */
+
+  html|div scrollbarbutton[type="decrement"] {
+    -moz-appearance: scrollbarbutton-left;
+     background-image: url("chrome://global/skin/arrow/arrow-lft.gif")
+  }
+
+  html|div scrollbarbutton[type="decrement"][disabled="true"] {
+     background-image: url("chrome://global/skin/arrow/arrow-lft-dis.gif")
+  }
+
+  html|div scrollbar[orient="vertical"] > scrollbarbutton[type="decrement"] {
+    -moz-appearance: scrollbarbutton-up;
+     background-image: url("chrome://global/skin/arrow/arrow-up.gif")
+  }
+
+  html|div scrollbar[orient="vertical"] > scrollbarbutton[type="decrement"][disabled="true"] {
+     background-image: url("chrome://global/skin/arrow/arrow-up-dis.gif")
+  }
+
+}

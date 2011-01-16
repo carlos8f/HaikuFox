@@ -1,0 +1,355 @@
+/*close
+
+ * The conabtents of this file are subject to the Netscape Public
+ * License Version 1.1 (the "License"); you may not use this file
+ * except in compliance with the License. You may obtain a copy of
+ * the License at http://www.mozilla.org/NPL/
+ *
+ * Software distributed under the License is distributed on an "AS
+ * IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or
+ * implied. See the License for the specific language governing
+ * rights and limitations under the License.
+ *
+ * The Original Code is Mozilla Communicator client code, released
+ * March 31, 1998.
+ *
+ * The Initial Developer of the Original Code is Netscape
+ * Communications Corporation. Portions created by Netscape are
+ * Copyright (C) 1998-2001 Netscape Communications Corporation. All
+ * Rights Reserved.
+ *
+ * Contributor(s):
+ *   Joe Hewitt (hewitt@netscape.com)
+ */
+
+/* ===== tabbox.css =================================================
+  == Styles used by XUL tab-related elements.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/****************************************************************************************/
+
+.tabs-left,
+.tabs-right {
+  border-bottom: 0px solid;
+}
+
+tabpanels {
+  -moz-appearance: none;
+}
+
+tabs {
+  position: relative !important;
+  margin-top: -3px !important;
+  padding: 0 !important;
+  padding-left: 3px !important;
+  background: #BABABA url("chrome://global/skin/tabs/tabs-back.gif") top left repeat-x !important;
+  border: 0;
+  border-bottom: 1px solid #9A9A9A !important;
+}
+
+tabbox[orient="vertical"] tabs[orient="horizontal"] {
+  position: relative !important; 
+  margin-top: -3px;
+  padding-left: 3px;
+  background: #BABABA url("chrome://global/skin/tabs/tabs-back.gif") top left repeat-x;
+  border: 0;
+  border-bottom: 1px solid #9A9A9A;
+}
+
+/****************************************************************************************/
+
+tab 
+{
+  height: 26px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 3px !important;
+  padding-right: 8px;
+  background-color: #BABABA;
+}
+
+tab[busy] > .tab-middle > .tab-icon {
+  list-style-image: url("chrome://browser/skin/Throbber-small.gif");
+}
+
+tab[selected="true"] > .tab-icon {
+  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+} 
+
+tab[selected="true"] {
+  font-weight: bold;
+}
+
+.tab-drop-indicator-bar {
+    height: 9px;
+    margin-top: -9px;
+    position: relative;
+	-moz-margin-start: 7px;
+}
+
+.tab-drop-indicator {
+    height: 13px;
+    width: 15px;
+    margin-bottom: -5px;
+    position: relative;
+    background: url("chrome://global/skin/tabDragDrop/tabDragIndicator.png") 50% 50% no-repeat;
+}
+
+.tab-drop-indicator-bar[dragging="true"] {
+    z-index: 20;
+}
+
+browsermessage {
+  background-color: InfoBackground;
+  color: InfoText;
+  padding: 3px;
+}
+
+browsermessage[type="top"] {
+  border-bottom: 1px solid #9A9A9A;
+}
+
+browsermessage[type="bottom"] {
+  border-top: 1px solid #9A9A9A;
+}
+
+.messageImage {
+  width: 16px;
+  height: 16px;
+}
+
+.messageText {
+  -moz-margin-start: 5px;
+}
+
+.messageButton {
+  margin: 0px 5px 0px 5px;
+}
+
+
+/* :::: Starting Cap :::: */
+tab .tab-icon {
+  height: 26px !important; /* sets height to match graphic elements */
+  width: 32px !important; /* limits width of icon to 16px */
+  border: 0 !important;
+  padding: 5px 5px 5px 11px !important;
+  margin: 0 !important;
+  text-align: left;
+  color: #000;
+  background-color: #BABABA !important;
+  background-image: url("chrome://global/skin/tabs/cap-left.gif") !important;
+  background-repeat: no-repeat !important;
+  background-position: left top !important;
+  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+}
+
+/* :::: Selected Cap :::: */
+tab[selected="true"] .tab-icon {
+  background-image: url("chrome://global/skin/tabs/cap-left-selected.gif") !important;
+  background-repeat: no-repeat !important;
+}
+
+/* :::: Next Cap :::: */
+tab[afterselected="true"] .tab-icon {
+  background-image: url("chrome://global/skin/tabs/cap-left.gif") !important;
+}
+
+/****************************************************************************************/
+
+/* :::: Tab Back :::: */
+.tab-text {
+  height: 26px !important;
+  border: 0 !important;
+  padding: 6px 3px 3px 0px !important;
+  margin: 0px 0px 0px 0px !important;
+  text-align: left;
+  background-image: url("chrome://global/skin/tabs/text-back.gif") !important;
+  background-repeat: no-repeat !important;
+  background-position: right top !important;
+  color: #000;
+}
+
+tab[selected="true"] .tab-text {
+  background-image: url("chrome://global/skin/tabs/text-back-selected.gif") !important;
+  background-repeat: no-repeat !important;
+  background-position: right top !important;
+}
+
+/****************************************************************************************/
+
+/* :::: End Cap :::: */
+tab {
+  background-image: url("chrome://global/skin/tabs/cap-right.gif") !important;
+  background-repeat: no-repeat !important;
+  background-position: right top !important;
+}
+
+  tab[last-tab="true"] {
+  background-image: url("chrome://global/skin/tabs/cap-right.gif") !important;
+  }
+  
+  tab[selected="true"][last-tab="true"] {
+  background-image: url("chrome://global/skin/tabs/cap-right-selected.gif") !important;
+  }
+  
+  tab[first-tab="true"][selected="true"] {
+  background-image: url("chrome://global/skin/tabs/cap-right-selected.gif") !important;
+  }
+
+/* :::: Before Selected Cap :::: */
+tab[beforeselected="true"] {
+  background-image: url("chrome://global/skin/tabs/cap-right.gif") !important;
+}
+
+/* :::: Selected Cap :::: */
+tab[selected="true"] {
+  background-image: url("chrome://global/skin/tabs/cap-right-selected.gif") !important;
+  background-repeat: no-repeat !important;
+  font-weight: bold !important;
+}
+
+/****************************************************************************************/
+
+tabbox[orient="horizontal"] tabs[orient="vertical"],
+tabbox[orient="horizontal"] tabpanels + tabs[orient="vertical"] {
+  position: static !important;
+  margin: 0 !important;
+}
+
+tabbox[orient="vertical"] tabpanels + tabs[orient="horizontal"] {
+  position: static !important;
+  margin: 0 !important;
+}
+
+/* bottom tabs */
+tabbox[orient="vertical"] tabpanels + tabs[orient="horizontal"] tab,
+tabbox[orient="vertical"] tabpanels + tabs[orient="horizontal"] .tab-text {
+  padding: 3px;
+}
+
+/* left tabs */
+tabbox[orient="horizontal"] tabs[orient="vertical"] tab,
+tabbox[orient="horizontal"] tabs[orient="vertical"] .tab-text
+ { 
+background-image: none !important;
+}
+
+/* right tabs */
+tabbox[orient="horizontal"] tabpanels + tabs[orient="vertical"]  tab,
+tabbox[orient="horizontal"] tabpanels + tabs[orient="vertical"]  .tab-text
+ { 
+background-image: none !important;
+}
+
+tabbox { 
+  border: none;
+}
+
+/**
+ * In-tab close button
+ */
+.tab-close-button > .toolbarbutton-icon {
+  -moz-margin-end: 0px !important;
+}
+
+.tab-close-button {
+  list-style-image: url("chrome://global/skin/icons/close.png");
+  -moz-appearance: none;
+  -moz-image-region: rect(0px, 64px, 16px, 48px);
+  -moz-margin-start: 2px;
+  margin-top: 2px;
+  border: none !important;
+  padding: 0px;
+  opacity: 0.7;
+}
+
+.tab-close-button:hover,
+.tabbrowser-tab[selected="true"] > .tab-close-button:hover {
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+  opacity: 1.0;
+}
+
+.tab-close-button:hover:active,
+.tabbrowser-tab[selected="true"] > .tab-close-button:hover:active {
+  -moz-image-region: rect(0px, 48px, 16px, 32px);
+  opacity: 1.0;
+}
+
+.tab-close-button-placeholder {
+  list-style-image: url("chrome://global/skin/icons/close.png");
+  -moz-image-region: rect(0px, 64px, 16px, 48px);
+  opacity: 0.7;
+  -moz-margin-start: 2px;
+  margin-top: 2px;
+  border: none !important;
+  padding: 0px;
+}
+
+.tabbrowser-tab[selected="true"] > .tab-close-button {
+  -moz-margin-start: 2px;
+  margin-top: 0px;
+  opacity: 1.0;
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+}
+
+/**
+ * All Tabs Button
+ */
+.tabs-alltabs-box {
+  background-color: #DCDCDC;
+  margin-top: 2px;
+  border-left: 5px solid;
+  -moz-border-left-colors:  #BCBCBC #BCBCBC #BCBCBC #ABABAB #BABABA; 
+  border-bottom: 5px solid;
+  -moz-border-bottom-colors: #BCBCBC #BCBCBC #BCBCBC #ABABAB #BABABA; 
+  -moz-border-radius: 0px 0px 0px 6px;
+}
+
+.tabs-alltabs-box[flash="true"] {
+}
+
+.tabs-alltabs-button {
+  list-style-image: url("chrome://global/skin/icons/alltabs.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px); 
+  border: 0px !important;
+  margin: 0px !important;
+  margin-left: 4px !important;
+}
+
+.tabs-alltabs-button > .toolbarbutton-icon {
+  margin-right: -5px;
+}
+
+.tabs-alltabs-button > .toolbarbutton-menu-dropmarker {
+  margin-right: -5px;
+}
+
+.tabs-alltabs-button:hover {
+  -moz-image-region: rect(0px, 48px, 16px, 32px);
+}
+
+/**
+ * All Tabs Menupopup 
+ */
+
+.alltabs-item > .menu-iconic-left > .menu-iconic-icon {
+  width: 16px;
+  height: 16px;
+  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
+  border: 0px !important;
+}
+
+.alltabs-item[selected="true"] {
+  font-weight: bold;
+}
+
+.alltabs-item[busy] > .menu-iconic-left > .menu-iconic-icon {
+  list-style-image: url("chrome://browser/skin/Throbber-small.gif");
+  opacity: 0.5;
+}

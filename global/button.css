@@ -1,0 +1,239 @@
+
+/*
+ * The contents of this file are subject to the Netscape Public
+ * License Version 1.1 (the "License"); you may not use this file
+ * except in compliance with the License. You may obtain a copy of
+ * the License at http://www.mozilla.org/NPL/
+ *
+ * Software distributed under the License is distributed on an "AS
+ * IS" basis, WITHOUT WARRANTY OF ANY KIND, either express or
+ * implied. See the License for the specific language governing
+ * rights and limitations under the License.
+ *
+ * The Original Code is Mozilla Communicator client code, released
+ * March 31, 1998.
+ *
+ * The Initial Developer of the Original Code is Netscape
+ * Communications Corporation. Portions created by Netscape are
+ * Copyright (C) 1998-1999 Netscape Communications Corporation. All
+ * Rights Reserved.
+ *
+ * Contributor(s):
+ *   Joe Hewitt (hewitt@netscape.com)
+ */
+
+/* ===== button.css =====================================================
+  == Styles used by the XUL button element.
+  ======================================================================= */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::::::::::: button ::::::::::::: */
+/* colors hard coded to match BeOS R5 */
+button {
+  border: 8px solid;
+  -moz-border-top-colors: transparent transparent transparent transparent #606060 #D8D8D8 #FFFFFF #FFFFFF ;
+  -moz-border-left-colors: transparent transparent transparent transparent #606060 #D8D8D8 #FFFFFF #FFFFFF ;
+  -moz-border-bottom-colors: transparent transparent transparent transparent  #606060 #989898 #D8D8D8 #E8E8E8;
+  -moz-border-right-colors: transparent transparent transparent transparent #606060 #989898 #D8D8D8 #E8E8E8 ;
+  -moz-border-radius: 5px;
+  background-color: #E8E8E8;
+  min-width: 5.5em;
+}
+
+/* .......... active/open/checked ... clicked state .......... */
+
+button:hover:active,
+button[open="true"],
+button[checked="true"] {
+  border: 8px solid;
+  -moz-border-top-colors: transparent transparent transparent transparent  #606060 #262626 #010101 #010101;
+  -moz-border-left-colors: transparent transparent transparent transparent  #606060 #262626 #010101 #010101;
+  -moz-border-right-colors: transparent transparent transparent transparent  #606060 #606060 #383838 #262626;
+  -moz-border-bottom-colors: transparent transparent transparent transparent  #606060 #606060 #383838 #262626;
+  -moz-border-radius: 5px;
+  background-color: #262626;
+  color: #fff;
+  min-width: 5.5em;
+}
+
+/* .......... button box .......... */
+
+.button-box {
+  -moz-outline: 1px;
+  padding: 1px 3px 2px 3px;
+}
+
+.button-text {
+  margin: 0 !important;
+  text-align: center;
+}
+
+button:hover:active > .button-box,
+button[open="true"] > .button-box,
+button[checked="true"] > .button-box {
+  padding-top: 2px; padding-left: 4px; padding-bottom: 1px; padding-right: 2px;
+}
+
+/* .......... HTML Input .......... 
+
+html|*.button-input {
+  margin: 0;
+
+  min-width: 5.5em;
+
+  border: 8px solid;
+  -moz-border-top-colors: transparent transparent transparent transparent #606060 #D8D8D8 #FFFFFF #FFFFFF ;
+  -moz-border-left-colors: transparent transparent transparent transparent #606060 #D8D8D8 #FFFFFF #FFFFFF ;
+  -moz-border-bottom-colors: transparent transparent transparent transparent  #606060 #989898 #D8D8D8 #E8E8E8;
+  -moz-border-right-colors: transparent transparent transparent transparent #606060 #989898 #D8D8D8 #E8E8E8 ;
+  -moz-border-radius: 5px;
+  background-color: #E8E8E8;
+  color: #808080;
+  min-width: 5.5em;
+} */
+
+/* .......... focused state .......... */
+
+button:focus {
+  border: 8px solid;
+  -moz-border-top-colors: transparent transparent transparent transparent #606060 #D8D8D8 #FFFFFF #FFFFFF ;
+  -moz-border-left-colors: transparent transparent transparent transparent #606060 #D8D8D8 #FFFFFF #FFFFFF ;
+  -moz-border-bottom-colors: transparent transparent transparent transparent  #606060 #989898 #D8D8D8 #E8E8E8;
+  -moz-border-right-colors: transparent transparent transparent transparent #606060 #989898 #D8D8D8 #E8E8E8 ;
+  -moz-border-radius: 5px;
+  background-color: #E8E8E8;
+  min-width: 5.5em;
+}
+
+button:focus > .button-box {
+  -moz-outline: 1px;
+;
+}
+
+/* .......... default state .......... */
+/* colors hard coded to match BeOS R5 */
+button[default="true"] {
+  border: 8px solid;
+  -moz-border-top-colors: #606060 #E8E8E8 #D8D8D8 #D8D8D8 #606060 #D8D8D8 #FFFFFF #FFFFFF  ;
+  -moz-border-left-colors: #606060 #E8E8E8 #D8D8D8 #D8D8D8 #606060 #D8D8D8 #FFFFFF #FFFFFF ;
+  -moz-border-bottom-colors: #606060 #989898 #D8D8D8 #D8D8D8  #606060 #989898 #D8D8D8 #E8E8E8;
+  -moz-border-right-colors: #606060 #989898 #D8D8D8 #D8D8D8 #606060 #989898 #D8D8D8 #E8E8E8 ;
+  -moz-border-radius: 2px;
+  background-color: #E8E8E8;
+  min-width: 5.5em;
+}
+
+button[default="true"]:focus {
+  border: 8px solid;
+  -moz-border-top-colors: #606060 #E8E8E8 #D8D8D8 #D8D8D8 #606060 #D8D8D8 #FFFFFF #FFFFFF  ;
+  -moz-border-left-colors: #606060 #E8E8E8 #D8D8D8 #D8D8D8 #606060 #D8D8D8 #FFFFFF #FFFFFF ;
+  -moz-border-bottom-colors: #606060 #989898 #D8D8D8 #D8D8D8  #606060 #989898 #D8D8D8 #E8E8E8;
+  -moz-border-right-colors: #606060 #989898 #D8D8D8 #D8D8D8 #606060 #989898 #D8D8D8 #E8E8E8 ;
+  -moz-border-radius: 2px;
+  background-color: #E8E8E8;
+  min-width: 5.5em;
+}
+
+button[default="true"]:focus > .button-box {
+  -moz-outline: 1px;
+}
+
+button[default="true"]:active,
+button[default="true"][open="true"],
+button[default="true"][checked="true"] {
+  border: 8px solid;
+  -moz-border-top-colors: #606060 #E8E8E8 #D8D8D8 #D8D8D8 #606060 #262626 #010101 #010101;
+  -moz-border-left-colors: #606060 #E8E8E8 #D8D8D8 #D8D8D8 #606060 #262626 #010101 #010101;
+  -moz-border-right-colors: #606060 #989898 #D8D8D8 #D8D8D8 #606060 #606060 #383838 #262626;
+  -moz-border-bottom-colors: #606060 #989898 #D8D8D8 #D8D8D8 #606060 #606060 #383838 #262626;
+  -moz-border-radius: 2px;
+  background-color: #262626;
+  color: #fff;
+  min-width: 5.5em;
+}
+
+/* .......... disabled state .......... */
+
+button[disabled="true"] {
+  border: 8px solid;
+  -moz-border-top-colors: transparent transparent transparent transparent #989898 #E8E8E8 #FFFFFF #FFFFFF ;
+  -moz-border-left-colors: transparent transparent transparent transparent #989898 #E8E8E8 #FFFFFF #FFFFFF ;
+  -moz-border-bottom-colors: transparent transparent transparent transparent  #989898 #D8D8D8 #D8D8D8 #E8E8E8;
+  -moz-border-right-colors: transparent transparent transparent transparent #989898 #D8D8D8 #D8D8D8 #E8E8E8 ;
+  -moz-border-radius: 5px;
+  background-color: #E8E8E8;
+  color: #808080;
+  min-width: 5.5em;
+}
+
+ /* disabled Button Click */
+
+button[disabled="true"]:hover:active,
+button[disabled="true"][open="true"],
+button[disabled="true"][checked="true"] {
+  border: 8px solid;
+  -moz-border-top-colors: transparent transparent transparent transparent #989898 #E8E8E8 #FFFFFF #FFFFFF ;
+  -moz-border-left-colors: transparent transparent transparent transparent #989898 #E8E8E8 #FFFFFF #FFFFFF ;
+  -moz-border-bottom-colors: transparent transparent transparent transparent  #989898 #D8D8D8 #D8D8D8 #E8E8E8;
+  -moz-border-right-colors: transparent transparent transparent transparent #989898 #D8D8D8 #D8D8D8 #E8E8E8 ;
+  -moz-border-radius: 5px;
+  background-color: #E8E8E8;
+  color: #808080;
+  min-width: 5.5em;
+}
+
+/* ::::: menu/menu-button buttons ::::: */
+
+button[type="menu-button"] {
+  -moz-box-align: center;
+  -moz-box-pack: center;
+  margin: 0;
+  border: none;
+}
+
+.button-menu-dropmarker,
+.button-menubutton-dropmarker {
+  margin: 1px;
+  background-image: url("chrome://global/skin/arrow/arrow-dn.gif");
+  min-width:11px;
+  min-height:11px;
+}
+
+.button-menu-dropmarker[disabled="true"],
+.button-menubutton-dropmarker[disabled="true"] {
+  background-image: url("chrome://global/skin/arrow/arrow-dn-dis.gif");
+}
+
+.button-menubutton-dropmarker[open="true"] {
+  margin: 2px 0px 0px 2px;
+}
+
+/* ::::: plain buttons ::::: */
+
+button.plain {
+  border: 0px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+/* :::::  expanderButton (add Phoenix0.6) ::::: */
+
+button[type="disclosure"] {
+  border: 0px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  list-style-image: url("chrome://global/skin/tree/twisty-clsd.gif");
+  min-width: 0px !important;
+  background-color: transparent;
+}
+
+button[type="disclosure"][open="true"] {
+  list-style-image: url("chrome://global/skin/tree/twisty-open.gif");
+}
+
+button[type="disclosure"]:hover:active > .button-box,
+button[type="disclosure"]:focus > .button-box {
+  -moz-outline: 1px !important;
+  padding: 1px 4px 2px 3px !important;
+}
